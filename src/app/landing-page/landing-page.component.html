@@ -1,0 +1,56 @@
+<!-- navbar -->
+<nav style="z-index: 1;" class="navbar navbar-expand-lg bg-transparent mb-5">
+    <div class="container mt-2">
+        <a class="navbar-brand fw-bolder text-dark"><i
+                class="fa-solid fa-building-columns fa-beat-fade fa-lg me-2 text-primary"></i> Indian Bank</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a routerLink="indian-bank/login" class="btn text-primary fw-bolder" type="submit">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="indian-bank/register" class="btn text-success fw-bolder" type="submit">Join Now</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- content -->
+<section style="height: auto;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-6 mt-5">
+                <h1 class="fw-bolder mb-3">Welcome to <span class="text-primary">Indian Bank</span></h1>
+                <p>This Is Dummy Data : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum deleniti libero
+                    nam, fugiat numquam recusandae placeat, non eius laboriosam veniam ut. Quibusdam expedita
+                    voluptatibus veritatis incidunt totam fugiat harum placeat. Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Dolor laudantium dicta, enim unde, voluptas debitis exercitationem voluptatem est
+                    labore consectetur minus similique ullam beatae eius sunt repudiandae deserunt molestias nemo?</p>
+                <div class="collapse" id="collapseExample">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia mollitia consequuntur
+                    quibusdam, quaerat molestias qui illo maxime nulla similique, iusto tempore culpa temporibus! Ad
+                    deleniti dolorem optio temporibus dolor.
+                </div>
+                <a (click)="collapse()" class="btn btn-success mt-3" data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample" routerLink="">Read <span *ngIf="isCollapse">More</span>
+                    <span *ngIf="!isCollapse">Less</span></a>
+            </div>
+            <div class="col-lg-6">
+                <img class="w-100"
+                    src="https://static.vecteezy.com/system/resources/previews/004/449/882/original/online-banking-users-flat-illustration-customized-solutions-metaphor-credit-cards-transactions-online-deposits-cashless-payments-ewallet-internet-bank-account-isolated-cartoon-concept-vector.jpg"
+                    alt="image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer -->
+<footer>
+    <p class="text-center bg-info p-3 mb-0">&copy; All Rights Reserved <i
+            class="fa-solid fa-building-columns fa-lg me-2 text-dark"></i> Indian Bank</p>
+</footer>

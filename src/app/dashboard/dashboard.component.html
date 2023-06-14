@@ -1,0 +1,234 @@
+<!-- navbar -->
+<nav style="z-index: 1;" class="navbar navbar-expand-lg bg-dark mb-5">
+  <div class="container mt-2">
+    <a class="navbar-brand fw-bolder text-light"><i
+        class="fa-solid fa-building-columns fa-beat-fade fa-lg me-2 text-primary"></i> Indian Bank</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fa-solid fa-gear text-warning"></i> Settings
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a data-bs-toggle="modal" href="#staticBackdropdelete" class="dropdown-item"><i class="fa-solid fa-trash text-danger"></i> Remove Account</a>
+            </li>
+            <li>
+              <a (click)="logout()" class="dropdown-item btn"><i class="fa-solid fa-right-from-bracket text-primary"></i> Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- dashboard design -->
+<section style="height: auto;">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-6 mt-5">
+        <h1 class="fw-bolder mb-3">Welcome <span class="text-primary">{{user}}</span></h1>
+        <p>This Is Dummy Data : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum deleniti libero
+          nam, fugiat numquam recusandae placeat, non eius laboriosam veniam ut. Quibusdam expedita
+          voluptatibus veritatis incidunt totam fugiat harum placeat. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Dolor laudantium dicta, enim unde, voluptas debitis exercitationem voluptatem est
+          labore consectetur minus similique ullam beatae eius sunt repudiandae deserunt molestias nemo?</p>
+        <div class="collapse" id="collapseExample">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia mollitia consequuntur
+          quibusdam, quaerat molestias qui illo maxime nulla similique, iusto tempore culpa temporibus! Ad
+          deleniti dolorem optio temporibus dolor.
+        </div>
+        <a (click)="collapse()" class="btn btn-success mt-3 shadow rounded" data-bs-toggle="collapse"
+          data-bs-target="#collapseExample">Read <span *ngIf="isCollapse">More</span>
+          <span *ngIf="!isCollapse">Less</span></a>
+      </div>
+      <div class="col-lg-6">
+        <img class="w-100"
+          src="https://static.vecteezy.com/system/resources/previews/004/449/882/original/online-banking-users-flat-illustration-customized-solutions-metaphor-credit-cards-transactions-online-deposits-cashless-payments-ewallet-internet-bank-account-isolated-cartoon-concept-vector.jpg"
+          alt="image">
+      </div>
+    </div>
+
+    <!-- services -->
+    <div class="d-flex justify-content-center align-items-center">
+      <h3 class="fw-bolder">- Our <span class="text-primary">Services</span> -</h3>
+    </div>
+    <div class="row m-5">
+      <div class="col-lg-4 d-flex justify-content-center mb-5">
+        <!-- balance -->
+        <div (click)="getBalance()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" class="card btn"
+          style="width: 18rem;">
+          <div class="image"><img
+              src="https://img.freepik.com/premium-vector/put-money-bank-card-replenishment-account-balance-illustration-isolated-white-background_124715-673.jpg?w=2000"
+              class="card-img-top" alt="balance img"></div>
+          <div class="card-body">
+            <h5 class="card-title text-primary fw-bold">Balance Enquiry</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex justify-content-center mb-5">
+        <!-- fund transfer -->
+        <div data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="card btn" style="width: 18rem;">
+          <div class="image"><img src="https://cdn-icons-png.flaticon.com/512/8693/8693128.png" class="card-img-top"
+              alt="fund img"></div>
+          <div class="card-body">
+            <h5 class="card-title text-primary fw-bold">Fund Transfer</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex justify-content-center mb-5">
+        <!-- transactions -->
+        <div class="card btn" routerLink="/user/transactions" style="width: 18rem;">
+          <div class="image"><img
+              src="https://p.kindpng.com/picc/s/147-1475965_long-flowing-piece-of-paper-with-pie-charts.png"
+              class="card-img-top" alt="statement img"></div>
+          <div class="card-body">
+            <h5 class="card-title text-primary fw-bold">Mini Statement</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subscribe for more -->
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4 border p-4 rounded shadow p-3 mb-5 bg-white rounded">
+        <p class="text-center">For more updates</p>
+        <h4 class="fw-bold text-center text-primary">Subscribe</h4>
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="col-lg-4"></div>
+    </div>
+
+
+  </div>
+
+
+</section>
+
+<!-- footer -->
+<footer>
+  <p class="text-center bg-dark text-light p-3 mb-0">&copy; All Rights Reserved <i
+      class="fa-solid fa-building-columns fa-beat-fade fa-lg me-1 text-primary"></i> Indian Bank</p>
+</footer>
+
+
+<!-- balance offcanvas -->
+<div *ngIf="showOffcanvas" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Balance Enquiry</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <img class="w-100"
+        src="https://icons.veryicon.com/png/o/business/official-icon-of-qianjinding-supply-chain-2/balance-10.png"
+        alt="img">
+      <div class="text-center">
+        <h4>- Hello <span class="fw-bolder text-primary">{{user}}</span> -</h4>
+        <p>Your Current Balance : <span class="text-danger fw-bolder">{{balance}}</span></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- fund transfer Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 fw-bolder text-success" id="staticBackdropLabel">Fund Transfer Form</h1>
+        <button (click)="cancel()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="transferForm">
+          <!-- credit acno inp -->
+          <div class="form-floating mb-3">
+            <input name="creditAcno" formControlName="creditAcno" type="text" class="form-control"
+              id="floatingInputacno" placeholder="Credit Account" autocomplete="off">
+            <label for="floatingInput"><i class="fa-solid fa-credit-card me-1"></i> Credit Account</label>
+          </div>
+          <!-- validation Credit Acno-->
+          <div *ngIf="this.transferForm.get('creditAcno')?.errors && this.transferForm.get('creditAcno')?.touched"
+            class="validtxt mt-2 text-danger">
+            <h6>Invalid Credit Account</h6>
+          </div>
+          <!-- credit amnt inp -->
+          <div class="form-floating mb-3">
+            <input name="creditAmount" formControlName="creditAmount" type="text" class="form-control"
+              id="floatingInputamt" placeholder="Credit Amount" autocomplete="off">
+            <label for="floatingInput"><i class="fa-solid fa-money-check-dollar me-1"></i> Credit Amount</label>
+          </div>
+          <!-- Validation Credit Amount -->
+          <div *ngIf="this.transferForm.get('creditAmount')?.errors && this.transferForm.get('creditAmount')?.touched"
+            class="validtxt mt-2 text-danger">
+            <h6>Invalid Credit Amount</h6>
+          </div>
+          <!-- pswd inp -->
+          <div class="form-floating">
+            <input name="profilePswd" formControlName="profilePswd" type="password" class="form-control"
+              id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword"><i class="fa-solid fa-lock me-1"></i> Profile Password</label>
+          </div>
+          <!-- validation pswd -->
+          <div *ngIf="this.transferForm.get('profilePswd')?.errors && this.transferForm.get('profilePswd')?.touched"
+            class="validtxt mt-2 text-danger">
+            <h6>Invalid Profile Password</h6>
+          </div>
+        </form>
+
+        <!-- transfer message success div -->
+        <div *ngIf="transferSuccessMsg" class="text-success text-center mt-2 fw-bold">
+          {{transferSuccessMsg}}
+          <div class="text-primary">Please wait some times to another transaction</div>
+        </div>
+        <!-- transfer msg err div -->
+        <div class="text-danger text-center fw-bold mt-2">
+          {{transferFailMsg}}
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button (click)="cancel()" type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancel</button>
+        <button (click)="transfer()" type="button" [disabled]="!handleTransfer" class="btn btn-success">Transfer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Account Deletion Modal -->
+<div class="modal fade" id="staticBackdropdelete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 fw-bold text-danger" id="staticBackdropLabel">Delete Account</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure to delete your Account ?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+        <button (click)="deleteMyAcno()" data-bs-dismiss="modal" type="button" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
